@@ -1,0 +1,38 @@
+server:
+  port: 7777
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/welt_blog?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 159357
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+  redis:
+    port: 6379
+    host: 120.78.184.121
+    password: 159357
+
+  main:
+    allow-circular-references: true
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+oss:
+#  accessKey: MnaPX2C4H7KexLPXx6pIB-TEvyD5C9RuagGoY7I1
+#  secretKey: LcORnToz9ZEU_8qQiT0VoY2iZ9QejqalqLsKmCTD
+#  bucket: welt-blog
+  accessKeyId: LTAI5t6qPdu47VdBzwC9yq6P
+  accessKeySecret: hV1g4jWMvR1BV9sQaadUyfmGPJLuDF
+  bucket: welt-blog
+
